@@ -9,9 +9,9 @@ package iut.bad;
  * @author Asus
  */
 public class Humain {
-    protected String nom;
-    protected String prenom;
-    protected int age;
+    String nom;
+    String prenom;
+    int age;
     public Humain(String nom, String prenom,int age){
         this.nom=nom;
         this.prenom=prenom;
@@ -19,7 +19,11 @@ public class Humain {
     }
     public void details()
     {
-        System.out.println("Nom :"+ this.nom +"Prenom : "+this.prenom +"Age: "+ this.age);
+        System.out.println(toString());
+    }
+    @Override
+    public String toString(){
+        return "Nom: "+ nom+ ",Prenom: "+prenom+" age:"+age;
     }
     
 }
