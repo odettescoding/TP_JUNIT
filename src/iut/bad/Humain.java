@@ -8,7 +8,7 @@ package iut.bad;
  *
  * @author Asus
  */
-public class Humain {
+public class Humain implements Consommation {
     String nom;
     String prenom;
     int age;
@@ -25,5 +25,18 @@ public class Humain {
     public String toString(){
         return "Nom: "+ nom+ ",Prenom: "+prenom+" age:"+age;
     }
-    
+ 
+    @Override
+    public void manger(){
+        
+    }
+ 
+    @Override
+    public void boire(){
+        
+    }
+  
+    public void ami(Humain h) {
+        System.out.println(this.nom + " est ami avec " + h.nom);
+    }
 }
